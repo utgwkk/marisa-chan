@@ -16,5 +16,4 @@ $ python marisa-chan.py
 * requests
 
 ## TODO
-* [ ] UIをもっとイカしたものにする
 * [x] 例外発生時のtracebackをいい感じに取得する
