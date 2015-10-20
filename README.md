@@ -1,6 +1,6 @@
 # marisa-chan
 ## これなん
-ふぁぼった画像付きツイートをSlackに流すやつ
+ふぁぼった画像付きツイートをSlackに流して画像を保存するやつ
 
 ## How to use
 トークンを取ってきて、所定の変数に格納してから、
@@ -16,4 +16,5 @@ $ python marisa-chan.py
 * requests
 
 ## TODO
+* [ ] 真面目にREADMEを書く
 * [x] 例外発生時のtracebackをいい感じに取得する
