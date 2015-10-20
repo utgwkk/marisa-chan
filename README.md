@@ -13,6 +13,7 @@ $ python marisa-chan.py
 * Python 3.x
 * tweepy
   * tweepy/streaming.pyを、[このissueの回答通りに](https://github.com/tweepy/tweepy/issues/615#issuecomment-122886173)修正する必要があります
+* requests
 
 ## TODO
 * [ ] UIをもっとイカしたものにする
