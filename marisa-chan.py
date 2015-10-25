@@ -20,9 +20,9 @@ class MyStream(tweepy.StreamListener):
             for media in status.target_object['extended_entities']['media']:
                 url = media['media_url_https']
                 filename = os.path.basename(url)
-                r = requests.get(url + ':orig')
+                r = download(url + ':orig')
                 if r.status_code != 200:
-                    r = requests.get(url)
+                    r = download(url)
                     if r.status_code != 200:
                         continue
                 save_fname = save_image_dir + filename
