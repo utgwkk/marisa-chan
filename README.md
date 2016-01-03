@@ -7,6 +7,7 @@
 
 ```sh
 # tweepyをgitから引っ張ってくる(PyPIのものはstreamingのバグが修正されていないので)
+$ pip install -r requirements.txt
 $ pip install -U git+https://github.com/tweepy/tweepy.git
 $ python marisa-chan.py
 ```
