@@ -22,3 +22,26 @@ $ python marisa-chan.py
 ## TODO
 * [ ] 真面目にREADMEを書く
 * [x] 例外発生時のtracebackをいい感じに取得する
+
+## エラーで落ちるのなんとかしてほしい
+こういう感じのシェルスクリプトを書きます。
+
+```sh
+#!/bin/sh
+while :
+do
+  python marisachan.py
+  sleep 10
+done
+```
+
+そして、
+
+```sh
+$ bash start.sh
+```
+
+としてやれば、あら不思議! 魔理沙ちゃんが死んでも 10 秒後には蘇ってくれます。
+
+## 最後に
+Pull requests are welcome!
