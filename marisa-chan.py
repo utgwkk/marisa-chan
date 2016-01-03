@@ -31,6 +31,7 @@ class MyStream(tweepy.StreamListener):
 
 if __name__ == '__main__':
     try:
+        print('ちょっと場所を借りるぜ')
         params['text'] = '@utgw: 霧雨魔理沙、画像蒐集の旅に出発だぜ'
         post_to_Slack(params)
         stream = tweepy.Stream(auth, MyStream())
@@ -44,3 +45,4 @@ if __name__ == '__main__':
         params['text'] += '```\nいったん休ませてもらうぜ'
     finally:
         post_to_Slack(params)
+        print('おやすみなさいだぜ')
