@@ -4,15 +4,7 @@
 
 ## How to use
 * First, you have to obtain your Twitter app's consumer key and API token from [apps.twitter.com](https://apps.twitter.com/).
-* Store 4 keys and tokens in constant.py like this:
-
-```python
-# Twitter
-CONSUMER_KEY = "YOUR TWITTER APP'S KEY."
-CONSUMER_SECRET = "YOUR TWITTER APP'S SECRET KEY."
-ACCESS_TOKEN = "YOUR TOKEN."
-ACCESS_TOKEN_SECRET = "YOUR SECRET TOKEN."
-```
+* Configure some settings in config.py:
 
 * Then, execute this in your shell:
 

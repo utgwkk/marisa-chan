@@ -6,11 +6,6 @@ from traceback import print_exc, format_exc
 from constant import *
 from misc import *
 
-auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
-auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
-api = tweepy.API(auth)
-me = api.me().screen_name
-
 class MyStream(tweepy.StreamListener):
     def on_event(self, status):
         if status.event == 'favorite' and status.source['screen_name'] == me and 'extended_entities' in status.target_object:
