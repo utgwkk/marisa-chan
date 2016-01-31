@@ -1,47 +1,36 @@
 # marisa-chan
-## これなん
-ふぁぼった画像付きツイートをSlackに流して画像を保存するやつ
+## What' this?
+*marisa-chan* is a script that detects tweets you liked in Twitter and posts the tweet's URL to your Slack channel.
 
 ## How to use
-トークンを取ってきて、所定の変数に格納してから、
+* First, you have to obtain your Twitter app's consumer key and API token from [apps.twitter.com](https://apps.twitter.com/).
+* Store 4 keys and tokens in constant.py like this:
+
+```python
+# Twitter
+CONSUMER_KEY = "YOUR TWITTER APP'S KEY."
+CONSUMER_SECRET = "YOUR TWITTER APP'S SECRET KEY."
+ACCESS_TOKEN = "YOUR TOKEN."
+ACCESS_TOKEN_SECRET = "YOUR SECRET TOKEN."
+```
+
+* Then, execute this in your shell:
 
 ```sh
-# tweepyをgitから引っ張ってくる(PyPIのものはstreamingのバグが修正されていないので)
 $ pip install -r requirements.txt
 $ pip install -U git+https://github.com/tweepy/tweepy.git
 $ python marisa-chan.py
 ```
 
+* It is recommended to execute the script in your own server (with tmux).
+* Enjoy it!
+
 ## dependencies
 * Python 3.x
 * tweepy
-  * ~~tweepy/streaming.pyを、[このissueの回答通りに](https://github.com/tweepy/tweepy/issues/615#issuecomment-122886173)修正する必要があります~~
-  * GitHubに上がっているものは修正済みのようです。
+  * ~~You have to fix tweepy/streaming.py [following this issue](https://github.com/tweepy/tweepy/issues/615#issuecomment-122886173)~~.
+  * Tweepy in GitHub already fixed this bug.
 * requests
 
-## TODO
-* [ ] 真面目にREADMEを書く
-* [x] 例外発生時のtracebackをいい感じに取得する
-
-## エラーで落ちるのなんとかしてほしい
-こういう感じのシェルスクリプトを書きます。
-
-```sh
-#!/bin/sh
-while :
-do
-  python marisachan.py
-  sleep 10
-done
-```
-
-そして、
-
-```sh
-$ bash start.sh
-```
-
-としてやれば、あら不思議! 魔理沙ちゃんが死んでも 10 秒後には蘇ってくれます。
-
-## 最後に
+## PR
 Pull requests are welcome!
