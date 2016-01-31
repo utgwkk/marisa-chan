@@ -1,4 +1,5 @@
 from config import *
+import tweepy
 
 # Slack
 slackURL = "https://slack.com/api/"
