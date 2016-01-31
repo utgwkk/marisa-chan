@@ -32,15 +32,15 @@ class MyStream(tweepy.StreamListener):
 if __name__ == '__main__':
     try:
         print('ちょっと場所を借りるぜ')
-        params['text'] = '@utgw: 霧雨魔理沙、画像蒐集の旅に出発だぜ'
+        params['text'] = '霧雨魔理沙、画像蒐集の旅に出発だぜ'
         post_to_Slack(params)
         stream = tweepy.Stream(auth, MyStream())
         stream.userstream()
     except KeyboardInterrupt:
-        params['text'] = '@utgw: おやすみなさいだぜ'
+        params['text'] = 'おやすみなさいだぜ'
     except Exception as e:
         print_exc()
-        params['text'] = '@utgw: 画像を集めてたらエラーが発生したぜ\nTraceBackを貼っておくから修正してくれよな\n```\n'
+        params['text'] = '画像を集めてたらエラーが発生したぜ\nTraceBackを貼っておくから修正してくれよな\n```\n'
         params['text'] += format_exc()
         params['text'] += '```\nいったん休ませてもらうぜ'
     finally:
