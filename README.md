@@ -1,6 +1,6 @@
 # marisa-chan
 [![Build Status](https://travis-ci.org/utgw/marisa-chan.svg?branch=master)](https://travis-ci.org/utgw/marisa-chan)
-## What' this?
+## What is this?
 *marisa-chan* is a script that detects tweets you liked in Twitter and posts the tweet's URL to your Slack channel.
 
 ## How to use
